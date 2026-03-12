@@ -1,0 +1,61 @@
+.tours-page {
+  width: 100%;
+}
+
+.filter-section {
+  background: #f8f9fa;
+  padding: clamp(30px, 5vw, 40px) clamp(15px, 3vw, 20px) !important;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 12px 30px;
+  border: 2px solid var(--safari-green);
+  background: white;
+  color: var(--safari-green);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background: var(--safari-green);
+  color: white;
+}
+
+.filter-btn.active {
+  background: var(--safari-green);
+  color: white;
+}
+
+.tours-grid-full {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: clamp(20px, 3vw, 30px);
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .filter-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .filter-btn {
+    width: 100%;
+    padding: 10px 20px;
+  }
+
+  .tours-grid-full {
+    grid-template-columns: 1fr;
+  }
+}
